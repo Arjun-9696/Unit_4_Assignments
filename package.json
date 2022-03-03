@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Arjun-9696/Unit_4_Assignments/issues"
   },
-  "homepage": "https://github.com/Arjun-9696/Unit_4_Assignments#readme"
+  "homepage": "https://github.com/Arjun-9696/Unit_4_Assignments#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
