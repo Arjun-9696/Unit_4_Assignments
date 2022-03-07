@@ -12,13 +12,16 @@ app.get('/libraries', checkPermission("librarian"), (req, res) => {
 app.get('/authors',checkPermission("authors"), (req, res) => {
      res.send({ route: '/authors', permission: true });
 });
-function checkPermission(req,res,next) {
-    if(true){
-
-    }else{
-        console.log("failed");
+function checkPermission(role) {
+    return function logger(req, res, next) {
+    if (role === 'authors') {
+      return next();
+    }else if (role === 'libraries') {
+      return next();
     }
-    next()
+    return res.send("Not allowed");
+  };
+    
   }
 
 
