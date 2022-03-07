@@ -16,7 +16,8 @@ function checkPermission(role) {
     return function logger(req, res, next) {
     if (role === 'authors') {
       return next();
-    }else if (role === 'libraries') {
+    }
+    if (role === 'librarian') {
       return next();
     }
     return res.send("Not allowed");
