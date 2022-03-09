@@ -1,0 +1,1743 @@
+C:\Users\Arjun>mongo
+
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+test    0.000GB
+> db
+test
+> db.movies.find().pretty()
+{
+        "_id" : ObjectId("620018565e7cc10e5429969f"),
+        "id" : 8,
+        "movie_name" : "Circus of Horrors",
+        "movie_genre" : "Horror",
+        "production_year" : 2004,
+        "budget" : "$10787.11"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a0"),
+        "id" : 9,
+        "movie_name" : "Jules and Jim (Jules et Jim)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1968,
+        "budget" : "$18972.44"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a1"),
+        "id" : 10,
+        "movie_name" : "Normal",
+        "movie_genre" : "Drama",
+        "production_year" : 1996,
+        "budget" : "$17585.28"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a2"),
+        "id" : 11,
+        "movie_name" : "Shirley Valentine",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2012,
+        "budget" : "$10193.24"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a3"),
+        "id" : 12,
+        "movie_name" : "Kickboxer 3: The Art of War (Kickboxer III: The Art of War)",
+        "movie_genre" : "Action|Thriller",
+        "production_year" : 2010,
+        "budget" : "$9777.89"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a4"),
+        "id" : 13,
+        "movie_name" : "Swastika",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : "$10726.98"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a5"),
+        "id" : 4,
+        "movie_name" : "Ten Minutes Older: The Cello",
+        "movie_genre" : "Drama|Musical|Romance|Sci-Fi",
+        "production_year" : 2002,
+        "budget" : "$15469.88"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a6"),
+        "id" : 14,
+        "movie_name" : "Went to Coney Island on a Mission From God... Be Back by Five",
+        "movie_genre" : "Drama",
+        "production_year" : 2000,
+        "budget" : "$12142.67"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a7"),
+        "id" : 15,
+        "movie_name" : "Kull the Conqueror",
+        "movie_genre" : "Action|Adventure",
+        "production_year" : 2003,
+        "budget" : "$10892.14"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a8"),
+        "id" : 16,
+        "movie_name" : "Lottery Ticket",
+        "movie_genre" : "Comedy",
+        "production_year" : 2006,
+        "budget" : "$19600.87"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a9"),
+        "id" : 17,
+        "movie_name" : "7 Days (Les 7 jours du talion)",
+        "movie_genre" : "Thriller",
+        "production_year" : 2002,
+        "budget" : "$17309.77"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996aa"),
+        "id" : 19,
+        "movie_name" : "Abominable",
+        "movie_genre" : "Horror",
+        "production_year" : 1977,
+        "budget" : "$16666.72"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996ab"),
+        "id" : 20,
+        "movie_name" : "Aristocrats, The",
+        "movie_genre" : "Comedy|Documentary",
+        "production_year" : 2006,
+        "budget" : "$10202.18"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996ac"),
+        "id" : 18,
+        "movie_name" : "Knucklehead",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1990,
+        "budget" : "$14838.70"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996ad"),
+        "id" : 22,
+        "movie_name" : "I Woke Up Early the Day I Died",
+        "movie_genre" : "Comedy|Crime|Thriller",
+        "production_year" : 2008,
+        "budget" : "$9784.85"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996ae"),
+        "id" : 21,
+        "movie_name" : "Scorpio",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : 2012,
+        "budget" : "$13418.36"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996af"),
+        "id" : 23,
+        "movie_name" : "The Linguists",
+        "movie_genre" : "Documentary",
+        "production_year" : 2001,
+        "budget" : "$11935.20"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996b0"),
+        "id" : 24,
+        "movie_name" : "Live Free or Die",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2006,
+        "budget" : "$18751.44"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996b1"),
+        "id" : 5,
+        "movie_name" : "Lucky Jordan",
+        "movie_genre" : "Comedy|Crime|Drama",
+        "production_year" : 2005,
+        "budget" : "$16543.77"
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996b2"),
+        "id" : 2,
+        "movie_name" : "Zoom",
+        "movie_genre" : "Adventure|Comedy|Drama|Fantasy",
+        "production_year" : 2007,
+        "budget" : "$17503.71"
+}
+Type "it" for more
+>
+>  db.movies.find({"movie_name":{$eq:"Zoom"}}, {"movie_name": 1, "production_year": 1}).pretty()
+{
+        "_id" : ObjectId("620018565e7cc10e542996b2"),
+        "movie_name" : "Zoom",
+        "production_year" : 2007
+}
+>
+>  db.movies.find({"movie_name":{$eq:"Zoom"}}, {"movie_name": 1, "production_year": 1}).pretty()
+{
+        "_id" : ObjectId("620018565e7cc10e542996b2"),
+        "movie_name" : "Zoom",
+        "production_year" : 2007
+}
+> db.movies.find({"movie_name":{$ne:"Zoom"}}, {"movie_name": 1, "production_year": 1}).pretty()
+{
+        "_id" : ObjectId("620018565e7cc10e5429969f"),
+        "movie_name" : "Circus of Horrors",
+        "production_year" : 2004
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a0"),
+        "movie_name" : "Jules and Jim (Jules et Jim)",
+        "production_year" : 1968
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a1"),
+        "movie_name" : "Normal",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a2"),
+        "movie_name" : "Shirley Valentine",
+        "production_year" : 2012
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a3"),
+        "movie_name" : "Kickboxer 3: The Art of War (Kickboxer III: The Art of War)",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a4"),
+        "movie_name" : "Swastika",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a5"),
+        "movie_name" : "Ten Minutes Older: The Cello",
+        "production_year" : 2002
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a6"),
+        "movie_name" : "Went to Coney Island on a Mission From God... Be Back by Five",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a7"),
+        "movie_name" : "Kull the Conqueror",
+        "production_year" : 2003
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a8"),
+        "movie_name" : "Lottery Ticket",
+        "production_year" : 2006
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996a9"),
+        "movie_name" : "7 Days (Les 7 jours du talion)",
+        "production_year" : 2002
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996aa"),
+        "movie_name" : "Abominable",
+        "production_year" : 1977
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996ab"),
+        "movie_name" : "Aristocrats, The",
+        "production_year" : 2006
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996ac"),
+        "movie_name" : "Knucklehead",
+        "production_year" : 1990
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996ad"),
+        "movie_name" : "I Woke Up Early the Day I Died",
+        "production_year" : 2008
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996ae"),
+        "movie_name" : "Scorpio",
+        "production_year" : 2012
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996af"),
+        "movie_name" : "The Linguists",
+        "production_year" : 2001
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996b0"),
+        "movie_name" : "Live Free or Die",
+        "production_year" : 2006
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996b1"),
+        "movie_name" : "Lucky Jordan",
+        "production_year" : 2005
+}
+{
+        "_id" : ObjectId("620018565e7cc10e542996b3"),
+        "movie_name" : "Speed Racer",
+        "production_year" : 2001
+}
+Type "it" for more
+>
+>db.movies.find({"budget": {$gt: 9000}},{"movie_name":1, "production_year" :1}).pretty()
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4522"),
+        "movie_name" : "Four Sahibjade",
+        "production_year" : 1993
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4523"),
+        "movie_name" : "Unbelievers, The",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4524"),
+        "movie_name" : "Sword and the Sorcerer, The",
+        "production_year" : 1994
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4525"),
+        "movie_name" : "Atragon (Kaitei Gunkan)",
+        "production_year" : 1985
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4526"),
+        "movie_name" : "Space Milkshake",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4527"),
+        "movie_name" : "Crawling Hand, The",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4528"),
+        "movie_name" : "Giants and Toys (Kyojin to gangu)",
+        "production_year" : 1965
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4529"),
+        "movie_name" : "Down Terrace",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452a"),
+        "movie_name" : "Yanks",
+        "production_year" : 2002
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452b"),
+        "movie_name" : "Blind Chance (Przypadek)",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452c"),
+        "movie_name" : "Fools' Parade",
+        "production_year" : 1979
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452d"),
+        "movie_name" : "Until the Light Takes Us",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452e"),
+        "movie_name" : "Mischief Night",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452f"),
+        "movie_name" : "Dead Man's Walk",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4530"),
+        "movie_name" : "Brainstorm (Bicho de Sete Cabeças)",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4531"),
+        "movie_name" : "North Avenue Irregulars, The",
+        "production_year" : 1993
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4532"),
+        "movie_name" : "Operation Crossbow",
+        "production_year" : 2011
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4533"),
+        "movie_name" : "Inside the Twin Towers",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4534"),
+        "movie_name" : "Force Majeure (Turist)",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4535"),
+        "movie_name" : "Pushover",
+        "production_year" : 1994
+}
+Type "it" for more
+>
+> db.movies.find({"budget": {$gte: 9000}},{"movie_name":1, "production_year" :1}).pretty()
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4522"),
+        "movie_name" : "Four Sahibjade",
+        "production_year" : 1993
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4523"),
+        "movie_name" : "Unbelievers, The",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4524"),
+        "movie_name" : "Sword and the Sorcerer, The",
+        "production_year" : 1994
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4525"),
+        "movie_name" : "Atragon (Kaitei Gunkan)",
+        "production_year" : 1985
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4526"),
+        "movie_name" : "Space Milkshake",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4527"),
+        "movie_name" : "Crawling Hand, The",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4528"),
+        "movie_name" : "Giants and Toys (Kyojin to gangu)",
+        "production_year" : 1965
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4529"),
+        "movie_name" : "Down Terrace",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452a"),
+        "movie_name" : "Yanks",
+        "production_year" : 2002
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452b"),
+        "movie_name" : "Blind Chance (Przypadek)",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452c"),
+        "movie_name" : "Fools' Parade",
+        "production_year" : 1979
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452d"),
+        "movie_name" : "Until the Light Takes Us",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452e"),
+        "movie_name" : "Mischief Night",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452f"),
+        "movie_name" : "Dead Man's Walk",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4530"),
+        "movie_name" : "Brainstorm (Bicho de Sete Cabeças)",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4531"),
+        "movie_name" : "North Avenue Irregulars, The",
+        "production_year" : 1993
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4532"),
+        "movie_name" : "Operation Crossbow",
+        "production_year" : 2011
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4533"),
+        "movie_name" : "Inside the Twin Towers",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4534"),
+        "movie_name" : "Force Majeure (Turist)",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4535"),
+        "movie_name" : "Pushover",
+        "production_year" : 1994
+}
+Type "it" for more
+>
+>db.movies.find({"budget": {$lt: 20000}},{"movie_name":1, "production_year" :1}).pretty()
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4522"),
+        "movie_name" : "Four Sahibjade",
+        "production_year" : 1993
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4523"),
+        "movie_name" : "Unbelievers, The",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4524"),
+        "movie_name" : "Sword and the Sorcerer, The",
+        "production_year" : 1994
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4525"),
+        "movie_name" : "Atragon (Kaitei Gunkan)",
+        "production_year" : 1985
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4526"),
+        "movie_name" : "Space Milkshake",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4527"),
+        "movie_name" : "Crawling Hand, The",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4528"),
+        "movie_name" : "Giants and Toys (Kyojin to gangu)",
+        "production_year" : 1965
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4529"),
+        "movie_name" : "Down Terrace",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452a"),
+        "movie_name" : "Yanks",
+        "production_year" : 2002
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452b"),
+        "movie_name" : "Blind Chance (Przypadek)",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452c"),
+        "movie_name" : "Fools' Parade",
+        "production_year" : 1979
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452d"),
+        "movie_name" : "Until the Light Takes Us",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452e"),
+        "movie_name" : "Mischief Night",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452f"),
+        "movie_name" : "Dead Man's Walk",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4530"),
+        "movie_name" : "Brainstorm (Bicho de Sete Cabeças)",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4531"),
+        "movie_name" : "North Avenue Irregulars, The",
+        "production_year" : 1993
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4532"),
+        "movie_name" : "Operation Crossbow",
+        "production_year" : 2011
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4533"),
+        "movie_name" : "Inside the Twin Towers",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4534"),
+        "movie_name" : "Force Majeure (Turist)",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4535"),
+        "movie_name" : "Pushover",
+        "production_year" : 1994
+}
+Type "it" for more
+>
+> db.movies.find({"budget": {$lte: 20000}},{"movie_name":1, "production_year" :1}).pretty()
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4522"),
+        "movie_name" : "Four Sahibjade",
+        "production_year" : 1993
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4523"),
+        "movie_name" : "Unbelievers, The",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4524"),
+        "movie_name" : "Sword and the Sorcerer, The",
+        "production_year" : 1994
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4525"),
+        "movie_name" : "Atragon (Kaitei Gunkan)",
+        "production_year" : 1985
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4526"),
+        "movie_name" : "Space Milkshake",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4527"),
+        "movie_name" : "Crawling Hand, The",
+        "production_year" : 2000
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4528"),
+        "movie_name" : "Giants and Toys (Kyojin to gangu)",
+        "production_year" : 1965
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4529"),
+        "movie_name" : "Down Terrace",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452a"),
+        "movie_name" : "Yanks",
+        "production_year" : 2002
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452b"),
+        "movie_name" : "Blind Chance (Przypadek)",
+        "production_year" : 1999
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452c"),
+        "movie_name" : "Fools' Parade",
+        "production_year" : 1979
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452d"),
+        "movie_name" : "Until the Light Takes Us",
+        "production_year" : 1998
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452e"),
+        "movie_name" : "Mischief Night",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452f"),
+        "movie_name" : "Dead Man's Walk",
+        "production_year" : 1996
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4530"),
+        "movie_name" : "Brainstorm (Bicho de Sete Cabeças)",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4531"),
+        "movie_name" : "North Avenue Irregulars, The",
+        "production_year" : 1993
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4532"),
+        "movie_name" : "Operation Crossbow",
+        "production_year" : 2011
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4533"),
+        "movie_name" : "Inside the Twin Towers",
+        "production_year" : 2010
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4534"),
+        "movie_name" : "Force Majeure (Turist)",
+        "production_year" : 1992
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4535"),
+        "movie_name" : "Pushover",
+        "production_year" : 1994
+}
+Type "it" for more
+>
+> db.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]}).pretty()
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4526"),
+        "id" : 11,
+        "movie_name" : "Space Milkshake",
+        "movie_genre" : "Comedy|Sci-Fi",
+        "production_year" : 2010,
+        "budget" : 12300
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452a"),
+        "id" : 13,
+        "movie_name" : "Yanks",
+        "movie_genre" : "Drama|Romance|War",
+        "production_year" : 2002,
+        "budget" : 19814
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452e"),
+        "id" : 2,
+        "movie_name" : "Mischief Night",
+        "movie_genre" : "Drama|Horror|Thriller",
+        "production_year" : 2010,
+        "budget" : 14293
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4530"),
+        "id" : 7,
+        "movie_name" : "Brainstorm (Bicho de Sete Cabeças)",
+        "movie_genre" : "Drama",
+        "production_year" : 2010,
+        "budget" : 15029
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4532"),
+        "id" : 3,
+        "movie_name" : "Operation Crossbow",
+        "movie_genre" : "Action|Adventure|War",
+        "production_year" : 2011,
+        "budget" : 16326
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4533"),
+        "id" : 18,
+        "movie_name" : "Inside the Twin Towers",
+        "movie_genre" : "Drama",
+        "production_year" : 2010,
+        "budget" : 18535
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd453a"),
+        "id" : 31,
+        "movie_name" : "Surviving Picasso",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 18224
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd453b"),
+        "id" : 32,
+        "movie_name" : "Luke and Lucy: The Texas Rangers (Suske en Wiske: De Texas rakkers)",
+        "movie_genre" : "Adventure|Animation|Comedy|Western",
+        "production_year" : 2012,
+        "budget" : 13815
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4540"),
+        "id" : 37,
+        "movie_name" : "Two Faces of January, The",
+        "movie_genre" : "Thriller",
+        "production_year" : 2009,
+        "budget" : 15121
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4544"),
+        "id" : 39,
+        "movie_name" : "Platoon",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2004,
+        "budget" : 19330
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4545"),
+        "id" : 27,
+        "movie_name" : "Porky's",
+        "movie_genre" : "Comedy",
+        "production_year" : 2006,
+        "budget" : 12332
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4548"),
+        "id" : 41,
+        "movie_name" : "A Mulher Invisível",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 16539
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd454a"),
+        "id" : 46,
+        "movie_name" : "Possession",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2001,
+        "budget" : 19614
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd454d"),
+        "id" : 24,
+        "movie_name" : "Arrival of a Train, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2007,
+        "budget" : 12113
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd454e"),
+        "id" : 47,
+        "movie_name" : "Detroit Metal City (Detoroito Metaru Shiti)",
+        "movie_genre" : "Comedy|Drama|Musical",
+        "production_year" : 2011,
+        "budget" : 14692
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4556"),
+        "id" : 50,
+        "movie_name" : "It's Alive",
+        "movie_genre" : "Horror",
+        "production_year" : 2010,
+        "budget" : 10695
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4557"),
+        "id" : 56,
+        "movie_name" : "Cartoonist: Jeff Smith, BONE and the Changing Face of Comics, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2009,
+        "budget" : 18198
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd455c"),
+        "id" : 63,
+        "movie_name" : "Chosen One, The",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2006,
+        "budget" : 10193
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd455d"),
+        "id" : 65,
+        "movie_name" : "Man for All Seasons, A",
+        "movie_genre" : "Drama",
+        "production_year" : 2010,
+        "budget" : 14832
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd455e"),
+        "id" : 67,
+        "movie_name" : "Fatal Hour, The",
+        "movie_genre" : "Crime|Mystery|Thriller",
+        "production_year" : 2005,
+        "budget" : 18855
+}
+Type "it" for more
+>
+> db.movies.find({$or:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]}).pretty()
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4522"),
+        "id" : 6,
+        "movie_name" : "Four Sahibjade",
+        "movie_genre" : "Animation",
+        "production_year" : 1993,
+        "budget" : 16043
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4523"),
+        "id" : 8,
+        "movie_name" : "Unbelievers, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 1996,
+        "budget" : 17931
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4524"),
+        "id" : 4,
+        "movie_name" : "Sword and the Sorcerer, The",
+        "movie_genre" : "Action|Adventure|Fantasy",
+        "production_year" : 1994,
+        "budget" : 10610
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4525"),
+        "id" : 9,
+        "movie_name" : "Atragon (Kaitei Gunkan)",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 1985,
+        "budget" : 13437
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4526"),
+        "id" : 11,
+        "movie_name" : "Space Milkshake",
+        "movie_genre" : "Comedy|Sci-Fi",
+        "production_year" : 2010,
+        "budget" : 12300
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4527"),
+        "id" : 10,
+        "movie_name" : "Crawling Hand, The",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2000,
+        "budget" : 16303
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4528"),
+        "id" : 5,
+        "movie_name" : "Giants and Toys (Kyojin to gangu)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1965,
+        "budget" : 15611
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4529"),
+        "id" : 12,
+        "movie_name" : "Down Terrace",
+        "movie_genre" : "Comedy|Crime|Drama",
+        "production_year" : 1996,
+        "budget" : 15566
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452a"),
+        "id" : 13,
+        "movie_name" : "Yanks",
+        "movie_genre" : "Drama|Romance|War",
+        "production_year" : 2002,
+        "budget" : 19814
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452b"),
+        "id" : 14,
+        "movie_name" : "Blind Chance (Przypadek)",
+        "movie_genre" : "Drama",
+        "production_year" : 1999,
+        "budget" : 15285
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452c"),
+        "id" : 17,
+        "movie_name" : "Fools' Parade",
+        "movie_genre" : "Comedy|Drama|Thriller",
+        "production_year" : 1979,
+        "budget" : 10276
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452d"),
+        "id" : 15,
+        "movie_name" : "Until the Light Takes Us",
+        "movie_genre" : "Documentary",
+        "production_year" : 1998,
+        "budget" : 18948
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452e"),
+        "id" : 2,
+        "movie_name" : "Mischief Night",
+        "movie_genre" : "Drama|Horror|Thriller",
+        "production_year" : 2010,
+        "budget" : 14293
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452f"),
+        "id" : 16,
+        "movie_name" : "Dead Man's Walk",
+        "movie_genre" : "Western",
+        "production_year" : 1996,
+        "budget" : 10374
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4530"),
+        "id" : 7,
+        "movie_name" : "Brainstorm (Bicho de Sete Cabeças)",
+        "movie_genre" : "Drama",
+        "production_year" : 2010,
+        "budget" : 15029
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4532"),
+        "id" : 3,
+        "movie_name" : "Operation Crossbow",
+        "movie_genre" : "Action|Adventure|War",
+        "production_year" : 2011,
+        "budget" : 16326
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4533"),
+        "id" : 18,
+        "movie_name" : "Inside the Twin Towers",
+        "movie_genre" : "Drama",
+        "production_year" : 2010,
+        "budget" : 18535
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4535"),
+        "id" : 22,
+        "movie_name" : "Pushover",
+        "movie_genre" : "Crime|Drama|Film-Noir",
+        "production_year" : 1994,
+        "budget" : 15697
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4536"),
+        "id" : 20,
+        "movie_name" : "Farewell, Home Sweet Home (Adieu, plancher des vaches!)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1995,
+        "budget" : 10992
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4537"),
+        "id" : 21,
+        "movie_name" : "Children of Huang Shi, The",
+        "movie_genre" : "Drama|War",
+        "production_year" : 1992,
+        "budget" : 11164
+}
+Type "it" for more
+>
+> db.movies.find({$or:[{"budget":{$lt:10000}},{"production_year":{$lt:2000}}]}).pretty()
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4522"),
+        "id" : 6,
+        "movie_name" : "Four Sahibjade",
+        "movie_genre" : "Animation",
+        "production_year" : 1993,
+        "budget" : 16043
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4523"),
+        "id" : 8,
+        "movie_name" : "Unbelievers, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 1996,
+        "budget" : 17931
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4524"),
+        "id" : 4,
+        "movie_name" : "Sword and the Sorcerer, The",
+        "movie_genre" : "Action|Adventure|Fantasy",
+        "production_year" : 1994,
+        "budget" : 10610
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4525"),
+        "id" : 9,
+        "movie_name" : "Atragon (Kaitei Gunkan)",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 1985,
+        "budget" : 13437
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4528"),
+        "id" : 5,
+        "movie_name" : "Giants and Toys (Kyojin to gangu)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1965,
+        "budget" : 15611
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4529"),
+        "id" : 12,
+        "movie_name" : "Down Terrace",
+        "movie_genre" : "Comedy|Crime|Drama",
+        "production_year" : 1996,
+        "budget" : 15566
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452b"),
+        "id" : 14,
+        "movie_name" : "Blind Chance (Przypadek)",
+        "movie_genre" : "Drama",
+        "production_year" : 1999,
+        "budget" : 15285
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452c"),
+        "id" : 17,
+        "movie_name" : "Fools' Parade",
+        "movie_genre" : "Comedy|Drama|Thriller",
+        "production_year" : 1979,
+        "budget" : 10276
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452d"),
+        "id" : 15,
+        "movie_name" : "Until the Light Takes Us",
+        "movie_genre" : "Documentary",
+        "production_year" : 1998,
+        "budget" : 18948
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452f"),
+        "id" : 16,
+        "movie_name" : "Dead Man's Walk",
+        "movie_genre" : "Western",
+        "production_year" : 1996,
+        "budget" : 10374
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4531"),
+        "id" : 1,
+        "movie_name" : "North Avenue Irregulars, The",
+        "movie_genre" : "Action|Crime",
+        "production_year" : 1993,
+        "budget" : 9020
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4534"),
+        "id" : 19,
+        "movie_name" : "Force Majeure (Turist)",
+        "movie_genre" : "Drama",
+        "production_year" : 1992,
+        "budget" : 9277
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4535"),
+        "id" : 22,
+        "movie_name" : "Pushover",
+        "movie_genre" : "Crime|Drama|Film-Noir",
+        "production_year" : 1994,
+        "budget" : 15697
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4536"),
+        "id" : 20,
+        "movie_name" : "Farewell, Home Sweet Home (Adieu, plancher des vaches!)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1995,
+        "budget" : 10992
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4537"),
+        "id" : 21,
+        "movie_name" : "Children of Huang Shi, The",
+        "movie_genre" : "Drama|War",
+        "production_year" : 1992,
+        "budget" : 11164
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4538"),
+        "id" : 30,
+        "movie_name" : "Dear Me",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1998,
+        "budget" : 19365
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4539"),
+        "id" : 29,
+        "movie_name" : "Peculiarities of the National Fishing (Osobennosti natsionalnoy rybalki)",
+        "movie_genre" : "Comedy",
+        "production_year" : 1988,
+        "budget" : 18840
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd453c"),
+        "id" : 33,
+        "movie_name" : "Speed Zone! (a.k.a. Cannonball Run III)",
+        "movie_genre" : "Action|Comedy",
+        "production_year" : 1967,
+        "budget" : 17253
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd453d"),
+        "id" : 25,
+        "movie_name" : "After the Fox (Caccia alla volpe)",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1999,
+        "budget" : 12214
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd453e"),
+        "id" : 36,
+        "movie_name" : "Let My Puppets Come",
+        "movie_genre" : "Comedy",
+        "production_year" : 1999,
+        "budget" : 11953
+}
+Type "it" for more db.movies.find({$or:[{"budget":{$ne:10000}},{"production_year":{$ne:2000}}]}).pretty()
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4522"),
+        "id" : 6,
+        "movie_name" : "Four Sahibjade",
+        "movie_genre" : "Animation",
+        "production_year" : 1993,
+        "budget" : 16043
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4523"),
+        "id" : 8,
+        "movie_name" : "Unbelievers, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 1996,
+        "budget" : 17931
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4524"),
+        "id" : 4,
+        "movie_name" : "Sword and the Sorcerer, The",
+        "movie_genre" : "Action|Adventure|Fantasy",
+        "production_year" : 1994,
+        "budget" : 10610
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4525"),
+        "id" : 9,
+        "movie_name" : "Atragon (Kaitei Gunkan)",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 1985,
+        "budget" : 13437
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4526"),
+        "id" : 11,
+        "movie_name" : "Space Milkshake",
+        "movie_genre" : "Comedy|Sci-Fi",
+        "production_year" : 2010,
+        "budget" : 12300
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4527"),
+        "id" : 10,
+        "movie_name" : "Crawling Hand, The",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2000,
+        "budget" : 16303
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4528"),
+        "id" : 5,
+        "movie_name" : "Giants and Toys (Kyojin to gangu)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1965,
+        "budget" : 15611
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4529"),
+        "id" : 12,
+        "movie_name" : "Down Terrace",
+        "movie_genre" : "Comedy|Crime|Drama",
+        "production_year" : 1996,
+        "budget" : 15566
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452a"),
+        "id" : 13,
+        "movie_name" : "Yanks",
+        "movie_genre" : "Drama|Romance|War",
+        "production_year" : 2002,
+        "budget" : 19814
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452b"),
+        "id" : 14,
+        "movie_name" : "Blind Chance (Przypadek)",
+        "movie_genre" : "Drama",
+        "production_year" : 1999,
+        "budget" : 15285
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452c"),
+        "id" : 17,
+        "movie_name" : "Fools' Parade",
+        "movie_genre" : "Comedy|Drama|Thriller",
+        "production_year" : 1979,
+        "budget" : 10276
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452d"),
+        "id" : 15,
+        "movie_name" : "Until the Light Takes Us",
+        "movie_genre" : "Documentary",
+        "production_year" : 1998,
+        "budget" : 18948
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452e"),
+        "id" : 2,
+        "movie_name" : "Mischief Night",
+        "movie_genre" : "Drama|Horror|Thriller",
+        "production_year" : 2010,
+        "budget" : 14293
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452f"),
+        "id" : 16,
+        "movie_name" : "Dead Man's Walk",
+        "movie_genre" : "Western",
+        "production_year" : 1996,
+        "budget" : 10374
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4530"),
+        "id" : 7,
+        "movie_name" : "Brainstorm (Bicho de Sete Cabeças)",
+        "movie_genre" : "Drama",
+        "production_year" : 2010,
+        "budget" : 15029
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4531"),
+        "id" : 1,
+        "movie_name" : "North Avenue Irregulars, The",
+        "movie_genre" : "Action|Crime",
+        "production_year" : 1993,
+        "budget" : 9020
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4532"),
+        "id" : 3,
+        "movie_name" : "Operation Crossbow",
+        "movie_genre" : "Action|Adventure|War",
+        "production_year" : 2011,
+        "budget" : 16326
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4533"),
+        "id" : 18,
+        "movie_name" : "Inside the Twin Towers",
+        "movie_genre" : "Drama",
+        "production_year" : 2010,
+        "budget" : 18535
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4534"),
+        "id" : 19,
+        "movie_name" : "Force Majeure (Turist)",
+        "movie_genre" : "Drama",
+        "production_year" : 1992,
+        "budget" : 9277
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4535"),
+        "id" : 22,
+        "movie_name" : "Pushover",
+        "movie_genre" : "Crime|Drama|Film-Noir",
+        "production_year" : 1994,
+        "budget" : 15697
+}
+Type "it" for more
+>
+> db.movies.find({$and:[{"production_year":{$gte:2000}},{"production_year":{$lte:2010}}]}).pretty()
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4526"),
+        "id" : 11,
+        "movie_name" : "Space Milkshake",
+        "movie_genre" : "Comedy|Sci-Fi",
+        "production_year" : 2010,
+        "budget" : 12300
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4527"),
+        "id" : 10,
+        "movie_name" : "Crawling Hand, The",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2000,
+        "budget" : 16303
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452a"),
+        "id" : 13,
+        "movie_name" : "Yanks",
+        "movie_genre" : "Drama|Romance|War",
+        "production_year" : 2002,
+        "budget" : 19814
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452e"),
+        "id" : 2,
+        "movie_name" : "Mischief Night",
+        "movie_genre" : "Drama|Horror|Thriller",
+        "production_year" : 2010,
+        "budget" : 14293
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4530"),
+        "id" : 7,
+        "movie_name" : "Brainstorm (Bicho de Sete Cabeças)",
+        "movie_genre" : "Drama",
+        "production_year" : 2010,
+        "budget" : 15029
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4533"),
+        "id" : 18,
+        "movie_name" : "Inside the Twin Towers",
+        "movie_genre" : "Drama",
+        "production_year" : 2010,
+        "budget" : 18535
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd453a"),
+        "id" : 31,
+        "movie_name" : "Surviving Picasso",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 18224
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4540"),
+        "id" : 37,
+        "movie_name" : "Two Faces of January, The",
+        "movie_genre" : "Thriller",
+        "production_year" : 2009,
+        "budget" : 15121
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4541"),
+        "id" : 38,
+        "movie_name" : "Miracle Mile",
+        "movie_genre" : "Drama|Romance|Sci-Fi",
+        "production_year" : 2010,
+        "budget" : 9136
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4542"),
+        "id" : 35,
+        "movie_name" : "President's Man, The",
+        "movie_genre" : "Action|Adventure|Thriller",
+        "production_year" : 2000,
+        "budget" : 16558
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4544"),
+        "id" : 39,
+        "movie_name" : "Platoon",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2004,
+        "budget" : 19330
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4545"),
+        "id" : 27,
+        "movie_name" : "Porky's",
+        "movie_genre" : "Comedy",
+        "production_year" : 2006,
+        "budget" : 12332
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4548"),
+        "id" : 41,
+        "movie_name" : "A Mulher Invisível",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 16539
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd454a"),
+        "id" : 46,
+        "movie_name" : "Possession",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2001,
+        "budget" : 19614
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd454d"),
+        "id" : 24,
+        "movie_name" : "Arrival of a Train, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2007,
+        "budget" : 12113
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4556"),
+        "id" : 50,
+        "movie_name" : "It's Alive",
+        "movie_genre" : "Horror",
+        "production_year" : 2010,
+        "budget" : 10695
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4557"),
+        "id" : 56,
+        "movie_name" : "Cartoonist: Jeff Smith, BONE and the Changing Face of Comics, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2009,
+        "budget" : 18198
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd455c"),
+        "id" : 63,
+        "movie_name" : "Chosen One, The",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2006,
+        "budget" : 10193
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd455d"),
+        "id" : 65,
+        "movie_name" : "Man for All Seasons, A",
+        "movie_genre" : "Drama",
+        "production_year" : 2010,
+        "budget" : 14832
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd455e"),
+        "id" : 67,
+        "movie_name" : "Fatal Hour, The",
+        "movie_genre" : "Crime|Mystery|Thriller",
+        "production_year" : 2005,
+        "budget" : 18855
+}
+Type "it" for more
+>
+> db.movies.find({$and:[{"production_year":{$gte:2000}},{"production_year":{$gt:2010}}]}).pretty().sort({"production_year":-1}).sort({"movie_name":1})
+{
+        "_id" : ObjectId("62001ff942705a8f71dd470f"),
+        "id" : 497,
+        "movie_name" : "27 Dresses",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2012,
+        "budget" : 11563
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd46e1"),
+        "id" : 448,
+        "movie_name" : "Angry Silence, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 11328
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd46ba"),
+        "id" : 415,
+        "movie_name" : "Annabel Takes a Tour (Annabel Takes a Trip)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2011,
+        "budget" : 9373
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd46f8"),
+        "id" : 476,
+        "movie_name" : "Bachelor Party Vegas",
+        "movie_genre" : "Adventure|Comedy",
+        "production_year" : 2012,
+        "budget" : 16868
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd45d5"),
+        "id" : 180,
+        "movie_name" : "Celsius 41.11: The Temperature at Which the Brain... Begins to Die",
+        "movie_genre" : "Documentary",
+        "production_year" : 2012,
+        "budget" : 14356
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd454e"),
+        "id" : 47,
+        "movie_name" : "Detroit Metal City (Detoroito Metaru Shiti)",
+        "movie_genre" : "Comedy|Drama|Musical",
+        "production_year" : 2011,
+        "budget" : 14692
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4572"),
+        "id" : 82,
+        "movie_name" : "Devil Bat, The",
+        "movie_genre" : "Crime|Horror|Mystery|Sci-Fi",
+        "production_year" : 2012,
+        "budget" : 9837
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd45bb"),
+        "id" : 156,
+        "movie_name" : "Dodge City",
+        "movie_genre" : "Romance|Western",
+        "production_year" : 2011,
+        "budget" : 13402
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd45b9"),
+        "id" : 155,
+        "movie_name" : "Easy Rider",
+        "movie_genre" : "Adventure|Drama",
+        "production_year" : 2013,
+        "budget" : 10698
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4715"),
+        "id" : 489,
+        "movie_name" : "Eight Iron Men",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2011,
+        "budget" : 18979
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4644"),
+        "id" : 291,
+        "movie_name" : "Elfie Hopkins: Cannibal Hunter",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 2011,
+        "budget" : 17697
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4652"),
+        "id" : 303,
+        "movie_name" : "Fight Club",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2013,
+        "budget" : 12133
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4585"),
+        "id" : 101,
+        "movie_name" : "For the Love of Benji",
+        "movie_genre" : "Adventure|Children|Comedy|Drama",
+        "production_year" : 2012,
+        "budget" : 15678
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4637"),
+        "id" : 279,
+        "movie_name" : "Force of One, A",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2011,
+        "budget" : 17634
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd46b8"),
+        "id" : 410,
+        "movie_name" : "Halfmoon (Paul Bowles - Halbmond)",
+        "movie_genre" : "Drama",
+        "production_year" : 2012,
+        "budget" : 18899
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd46a6"),
+        "id" : 390,
+        "movie_name" : "How to Cook Your Life",
+        "movie_genre" : "Documentary",
+        "production_year" : 2012,
+        "budget" : 17240
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd46fe"),
+        "id" : 463,
+        "movie_name" : "Irene, Go Home! (Irena do domu!)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2011,
+        "budget" : 12050
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd46f4"),
+        "id" : 471,
+        "movie_name" : "Jailhouse Rock",
+        "movie_genre" : "Crime|Drama|Musical|Romance",
+        "production_year" : 2011,
+        "budget" : 10637
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4702"),
+        "id" : 481,
+        "movie_name" : "Jolene",
+        "movie_genre" : "Drama",
+        "production_year" : 2012,
+        "budget" : 15119
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd457c"),
+        "id" : 94,
+        "movie_name" : "Judgment in Berlin",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2012,
+        "budget" : 11717
+}
+Type "it" for more
+>
+> db.movies.find().skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452c"),
+        "id" : 17,
+        "movie_name" : "Fools' Parade",
+        "movie_genre" : "Comedy|Drama|Thriller",
+        "production_year" : 1979,
+        "budget" : 10276
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452d"),
+        "id" : 15,
+        "movie_name" : "Until the Light Takes Us",
+        "movie_genre" : "Documentary",
+        "production_year" : 1998,
+        "budget" : 18948
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452e"),
+        "id" : 2,
+        "movie_name" : "Mischief Night",
+        "movie_genre" : "Drama|Horror|Thriller",
+        "production_year" : 2010,
+        "budget" : 14293
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd452f"),
+        "id" : 16,
+        "movie_name" : "Dead Man's Walk",
+        "movie_genre" : "Western",
+        "production_year" : 1996,
+        "budget" : 10374
+}
+{
+        "_id" : ObjectId("62001ff942705a8f71dd4530"),
+        "id" : 7,
+        "movie_name" : "Brainstorm (Bicho de Sete Cabeças)",
+        "movie_genre" : "Drama",
+        "production_year" : 2010,
+        "budget" : 15029
+}
+>
+> db.movies.remove({"movie_genre" : "Drama"},10)
+WriteResult({ "nRemoved" : 0 })
+> db.movies.count()
+408
+>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
